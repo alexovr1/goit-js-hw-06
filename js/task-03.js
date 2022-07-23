@@ -13,8 +13,19 @@ const images = [
   },
 ];
 
-console.log(images[0]);
+const galleryRef = document.querySelector('.gallery')
 
-// const gallery = document.querySelector{ '.gallery'};
+const imgRef = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width=300px height=auto /></li>`).join("");
 
-// gallery.innerHTML = ``
+galleryRef.insertAdjacentHTML("afterbegin", imgRef);
+
+// ==============STYLE==================
+
+galleryRef.style.display = 'grid';
+galleryRef.style.gridTemplateColumns = '1fr 1fr 1fr';
+// galleryRef.style.display = 'flex';
+// galleryRef.style.gap = '10px';
+// galleryRef.style.flexWrap = 'no-wrap';
+// galleryRef.style.justifyContent = 'center';
+// galleryRef.style.alignItems = 'center';
+// galleryRef.style.width = '100%';

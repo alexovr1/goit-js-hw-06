@@ -1,5 +1,4 @@
 const formRef = document.querySelector('.login-form')
-console.log(formRef);
 
 const onVerificatForm = (e) => {
     e.preventDefault();
